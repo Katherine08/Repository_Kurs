@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="356.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CourseWork.Lessons.EditLessonController">
+   <children>
+      <Label fx:id="lblTitle" layoutX="169.0" layoutY="14.0" text="Label">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="76.0" text="Название:" />
+      <Label layoutX="14.0" layoutY="122.0" text="Время:" />
+      <Label layoutX="14.0" layoutY="169.0" text="Группа:" />
+      <Label layoutX="14.0" layoutY="214.0" text="Учитель:" />
+      <Label layoutX="14.0" layoutY="262.0" text="День:" />
+      <TextField fx:id="editLessonName" layoutX="88.0" layoutY="72.0" prefHeight="25.0" prefWidth="274.0" />
+      <ComboBox fx:id="editLessonTime" layoutX="85.0" layoutY="118.0" prefHeight="25.0" prefWidth="274.0" />
+      <ComboBox fx:id="editLessonGroup" layoutX="87.0" layoutY="165.0" prefHeight="25.0" prefWidth="274.0" />
+      <ComboBox fx:id="editLessonTeacher" layoutX="87.0" layoutY="210.0" prefHeight="25.0" prefWidth="274.0" />
+      <ComboBox fx:id="editLessonDay" layoutX="87.0" layoutY="258.0" prefHeight="25.0" prefWidth="274.0" />
+      <Button fx:id="btnSaveLesson" layoutX="160.0" layoutY="305.0" mnemonicParsing="false" text="Сохранить" onAction="#save"/>
+   </children>
+</AnchorPane>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CourseWork.Controller">
+  <tabs>
+    <Tab id="tabChildren" text="Дети">
+         <content>
+            <SplitPane dividerPositions="0.1, 0.9" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="34.0" prefWidth="700.0">
+                     <children>
+                        <Button fx:id="btnRefresh" layoutX="250.0" layoutY="10.0" mnemonicParsing="false" onAction="#initialize" prefWidth="200.0" text="Обновить данные" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView id="tableChildren" fx:id="tableChildren" prefHeight="373.0" prefWidth="700.0">
+                          <columns>
+                            <TableColumn fx:id="columnChildrenFIO" minWidth="90.0" prefWidth="225.0" text="ФИО" />
+                            <TableColumn fx:id="columnChildrenParent" minWidth="225.0" prefWidth="225.0" text="Родитель" />
+                              <TableColumn fx:id="columnChildrenGroup" minWidth="225.0" prefWidth="225.0" text="Группа" />
+                              <TableColumn fx:id="columnChildrenID" prefWidth="75.0" text="ID" visible="false" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="62.0" prefWidth="700.0" spacing="245.0">
+                     <children>
+                        <Button fx:id="btnAddChildren" mnemonicParsing="false" onAction="#btnAddChildren" text="Добавить" />
+                        <Button fx:id="btnChangeChildren" mnemonicParsing="false" onAction="#btnEditChildren" text="Изменить" />
+                        <Button fx:id="btnDeleteChildren" mnemonicParsing="false" onAction="#btnDeleteChildren" text="Удалить" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </HBox>
+              </items>
+            </SplitPane>
+         </content>
+    </Tab>
+    <Tab id="tabParents" text="Родители">
+         <content>
+            <SplitPane dividerPositions="0.1, 0.9" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Button fx:id="btnRefresh4" layoutX="250.0" layoutY="10.0" mnemonicParsing="false" onAction="#initialize" prefHeight="25.0" prefWidth="200.0" text="Обновить данные" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView id="tableChildren" fx:id="tableParent" prefHeight="373.0" prefWidth="700.0">
+                           <columns>
+                              <TableColumn fx:id="columnParentFIO" minWidth="75.0" prefWidth="225.0" text="ФИО" />
+                              <TableColumn fx:id="columnParentAdress" minWidth="233.0" prefWidth="225.0" text="Адресс" />
+                              <TableColumn fx:id="columnParentPhone" minWidth="233.0" prefWidth="225.0" text="Телефон" />
+                              <TableColumn fx:id="columnParentID" prefWidth="75.0" text="ID" visible="false" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="62.0" prefWidth="700.0" spacing="245.0">
+                     <children>
+                        <Button fx:id="btnAddParent" mnemonicParsing="false" onAction="#btnAddParent" text="Добавить" />
+                        <Button fx:id="btnChangeParent" mnemonicParsing="false" onAction="#btnEditParent" text="Изменить" />
+                        <Button fx:id="btnDeleteParent" mnemonicParsing="false" onAction="#btnDeleteParent" text="Удалить" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </HBox>
+              </items>
+            </SplitPane>
+         </content>
+    </Tab>
+      <Tab id="tabLessons" text="Уроки">
+         <content>
+            <SplitPane dividerPositions="0.1, 0.9" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Button fx:id="btnRefresh3" layoutX="250.0" layoutY="10.0" mnemonicParsing="false" onAction="#initialize" prefWidth="200.0" text="Обновить данные" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView fx:id="tableLessons" prefHeight="374.0" prefWidth="700.0">
+                          <columns>
+                            <TableColumn fx:id="columnLessonName" minWidth="75.0" prefWidth="135.0" text="Название" />
+                              <TableColumn fx:id="columnLessonTime" minWidth="75.0" prefWidth="100.0" text="Время" />
+                              <TableColumn fx:id="columnLessonGroup" minWidth="75.0" prefWidth="100.0" text="Группа" />
+                              <TableColumn fx:id="columnLessonTeacher" minWidth="75.0" prefWidth="230.0" text="Учитель" />
+                              <TableColumn fx:id="columnLessonDay" minWidth="75.0" prefWidth="125.0" text="День" />
+                              <TableColumn fx:id="columnLessonID" prefWidth="75.0" text="ID" visible="false" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="62.0" prefWidth="700.0" spacing="245.0">
+                     <children>
+                        <Button fx:id="btnAddLesson" mnemonicParsing="false" onAction="#btnAddLesson" text="Добавить" />
+                        <Button fx:id="btnChangeLesson" mnemonicParsing="false" onAction="#btnEditLesson" text="Изменить" />
+                        <Button fx:id="btnDeleteLesson" mnemonicParsing="false" onAction="#btnDeleteLesson" text="Удалить" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </HBox>
+              </items>
+            </SplitPane>
+         </content>
+      </Tab>
+      <Tab id="tabGroups" text="Группы">
+         <content>
+            <SplitPane dividerPositions="0.1, 0.9" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Button fx:id="btnRefresh2" layoutX="250.0" layoutY="10.0" mnemonicParsing="false" onAction="#initialize" prefWidth="200.0" text="Обновить данные" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView fx:id="tableGroup" prefHeight="374.0" prefWidth="700.0">
+                          <columns>
+                            <TableColumn fx:id="columnGroupName" minWidth="75.0" prefWidth="695.0" text="Название" />
+                              <TableColumn fx:id="columnGroupID" prefWidth="75.0" text="ID" visible="false" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="62.0" prefWidth="700.0" spacing="245.0">
+                     <children>
+                        <Button fx:id="btnAddGroup" mnemonicParsing="false" onAction="#btnAddGroup" text="Добавить" />
+                        <Button fx:id="btnChangeGroup" mnemonicParsing="false" onAction="#btnEditGroup" text="Изменить" />
+                        <Button fx:id="btnDeleteGroup" mnemonicParsing="false" onAction="#btnDeleteGroup" text="Удалить" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </HBox>
+              </items>
+            </SplitPane>
+         </content>
+      </Tab>
+      <Tab id="tabEmployees" text="Сотрудники">
+         <content>
+            <SplitPane dividerPositions="0.1, 0.9" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Button fx:id="btnRefresh1" layoutX="250.0" layoutY="10.0" mnemonicParsing="false" onAction="#initialize" prefWidth="200.0" text="Обновить данные" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView id="tableChildren" fx:id="tableEmployees" prefHeight="374.0" prefWidth="700.0">
+                           <columns>
+                              <TableColumn fx:id="columnEmployeesID" prefWidth="75.0" text="ID" visible="false" />
+                              <TableColumn fx:id="columnEmployeesFIO" minWidth="75.0" prefWidth="230.0" text="ФИО" />
+                              <TableColumn fx:id="columnEmployeesPositionName" minWidth="75.0" prefWidth="230.0" text="Должность" />
+                              <TableColumn fx:id="columnEmployeesPhone" minWidth="75.0" prefWidth="230.0" text="Телефон" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="62.0" prefWidth="700.0" spacing="245.0">
+                     <children>
+                        <Button fx:id="btnAddEmployees" mnemonicParsing="false" onAction="#btnAddEmployees" text="Добавить" />
+                        <Button fx:id="btnChangeEmployees" mnemonicParsing="false" onAction="#btnEditEmployees" text="Изменить" />
+                        <Button fx:id="btnDeleteEmployees" mnemonicParsing="false" onAction="#btnDeleteEmployees" text="Удалить" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </HBox>
+              </items>
+            </SplitPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
